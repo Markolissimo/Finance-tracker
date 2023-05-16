@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Finance Tracker</title>
+    <!-- Стилі -->
+    <link rel="stylesheet" type="text/css" href="profile.css">
+    <!-- Шрифти -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans&display=swap" rel="stylesheet">
+    <!-- Графік -->
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="profile.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="stats">
+            <div class="greeting">
+                <h1>Привіт, User!</h1>
+            </div>
+            <p class="balance">Поточний баланс: $400</p>
+            <div class="transactions">
+                <div class="transaction">
+                    <p class="amount-income">+$200</p>
+                    <div class="info-container">
+                        <p class="description">Дохід</p>
+                        <p class="date">10.05.2023</p>
+                    </div>
+                </div>
+                <div class="transaction">
+                    <p class="amount-outcome">-$100</p>
+                    <div class="info-container">
+                        <p class="description">Витрати</p>
+                        <p class="date">09.05.2023</p>
+                    </div>
+                </div>
+                <div class="transaction">
+                    <p class="amount-income">+$300</p>
+                    <div class="info-container">
+                        <p class="description">Дохід</p>
+                        <p class="date">08.05.2023</p>
+                    </div>
+                </div>
+                <button class="show-more">Показати більше</button>
+            </div>
+        </div>
+        
+        <div id="chart_div"></div>
+    </div>
+    <div class="chart-buttons">
+        <button id="line_chart_year">Year</button>
+        <button id="line_chart_quarter">Quarter</button>
+        <button id="line_chart_week">Week</button>
+    
+    </div>
+
+        
+    </div>
+        
+    <div class="functionality">
+        <h2 class="functionality-title">Оберіть функціонал</h2>
+        <div class="card-container">
+            <div class="card">
+                <h3>Кредит</h3>
+                <p>Опис карточки 1</p>
+                <button onclick="window.location.href='creditpage.html';">Оформити</button>
+            </div>
+            <div class="card">
+                <h3>Депозит</h3>
+                <p>Опис карточки 2</p>
+                <button onclick="window.location.href='depositpage.html';">Оформити</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
