@@ -63,11 +63,11 @@
         <div class="card-container">
             <div class="card">
                 <h3>Кредит</h3>
-                <button onclick="window.location.href='creditpage.html';">Оформити</button>
+                <button onclick="window.location.href='templates/creditpage.html';">Оформити</button>
             </div>
             <div class="card">
                 <h3>Депозит</h3>
-                <button onclick="window.location.href='depositpage.html';">Оформити</button>
+                <button onclick="window.location.href='templates/depositpage.html';">Оформити</button>
             </div>
         </div>
         <div class="card-container">
@@ -93,7 +93,7 @@
                 <input type="text" id="editDeleteIncomeInput" class="input-field" placeholder="Введіть дохід">
                 <input type="text" id="editDeleteDescriptionInput" class="input-field" placeholder="Введіть опис доходу">
                 <div class="button-container">
-                    <button id="editDeleteAddButton" onclick="addIncome('editDelete')">Зберегти</button>
+                    <button id="editDeleteAddButton" onclick="addIncome('editDelete')">Submit</button>
                     <button id="editDeleteHideButton" onclick="toggleFormFields('editDelete')">Сховати</button>
                 </div>
                 <p id="editDeleteErrorMessage" class="error-message"></p>
