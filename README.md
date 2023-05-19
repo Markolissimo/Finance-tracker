@@ -5,9 +5,8 @@
 # Використані технології
 
 Frontend:
-- HTML, CSS;
+- HTML;
+- CSS;
 - JS;
-- 
 Backend:
-- 
--
+- Python(Django)
