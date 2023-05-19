@@ -43,7 +43,7 @@
                         <p class="date">08.05.2023</p>
                     </div>
                 </div>
-                <button class="show-more">Показати більше</button>
+                <button class="show-more" onclick="window.location.href='more.html';">Показати більше</button>
             </div>
         </div>
         
@@ -64,14 +64,47 @@
         <div class="card-container">
             <div class="card">
                 <h3>Кредит</h3>
-                <p>Опис карточки 1</p>
                 <button onclick="window.location.href='creditpage.html';">Оформити</button>
             </div>
             <div class="card">
                 <h3>Депозит</h3>
-                <p>Опис карточки 2</p>
                 <button onclick="window.location.href='depositpage.html';">Оформити</button>
             </div>
+        </div>
+        <div class="card-container">
+            <div class="card">
+                <h3>Додати дохід</h3>
+                <button id="addFormButton" onclick="toggleFormFields('add')">Оформити</button>
+                <div id="addFormFields" class="hidden">
+                    <input type="text" id="addIncomeInput" class="input-field" placeholder="Введіть дохід">
+                    <input type="text" id="addDescriptionInput" class="input-field" placeholder="Введіть опис доходу">
+                    <div class="button-container">
+                        <button id="addButton" onclick="addIncome('add')">Додати</button>
+                        <button id="hideButton" onclick="toggleFormFields('add')">Сховати</button>
+                    </div>
+                    <p id="addErrorMessage" class="error-message"></p>
+                </div>
+            </div>
+
+
+
+
+
+        <div class="card">
+            <h3>Редагувати/видалити дохід</h3>
+            <button id="editDeleteFormButton" onclick="toggleFormFields('editDelete')">Оформити</button>
+            <div id="editDeleteFormFields" class="hidden">
+                <input type="text" id="editDeleteIncomeInput" class="input-field" placeholder="Введіть дохід">
+                <input type="text" id="editDeleteDescriptionInput" class="input-field" placeholder="Введіть опис доходу">
+                <div class="button-container">
+                    <button id="editDeleteAddButton" onclick="addIncome('editDelete')">Додати</button>
+                    <button id="editDeleteHideButton" onclick="toggleFormFields('editDelete')">Сховати</button>
+                </div>
+                <p id="editDeleteErrorMessage" class="error-message"></p>
+            </div>
+        </div>
+
+
         </div>
     </div>
 </body>
