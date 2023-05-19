@@ -3,6 +3,7 @@ body {
     font-family: 'Instrument Sans', sans-serif;
 }
 
+
 .container {
     display: flex;
     justify-content: space-between;
@@ -57,11 +58,13 @@ body {
         height: 400px;
         width: 100%;
     }
+
 }
 
 #line_chart_year,
 #line_chart_quarter,
-#line_chart_week {
+#line_chart_week,
+.card-container button {
     font-family: 'Instrument Sans', sans-serif;
        background: transparent;
         border: 1px solid white;
@@ -90,7 +93,7 @@ body {
     border-radius: 4px;
     font-size: 14px;
     outline: none;
-    margin-bottom: 5px;
+    margin-bottom: 7px;
     transition: border-color 0.3s ease;
 }
 
@@ -105,7 +108,7 @@ body {
 }
 
 
-.transaction {
+.transaction, .credit-details {
     border: 1px solid white;
     border-radius: 4px;
     padding: 10px;
@@ -119,8 +122,23 @@ body {
     font-family: 'Instrument Sans', sans-serif; 
 }
 
+.credit-details {
+    width: 50%;
+    min-width: 400px;
+}
+.center-vertically {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-.transaction:hover {
+.functionality-credit {
+    color: white;
+}
+
+
+.transaction:hover,
+.credit-details:hover {
     box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2);
     transform: translateY(-1px);
 }
@@ -130,27 +148,41 @@ body {
     color: gray;
 }
 
+.credit-details .description-text{
+    font-size: 15px;
+}
+
+
 .transaction .amount-income,
-.transaction .amount-outcome {
+.transaction .amount-outcome,
+.credit-details .expiry-date-legit,
+ .credit-details .expiry-date-notlegit{
     margin-left: 10px;
     font-weight: bold;
     font-size: 24px;
     white-space: nowrap;
 }
 
-.transaction .description {
+.transaction .description,
+.credit-details .procents {
     font-size: 20px;
     color: white;
     transition: opacity 0.3s ease;
     margin-bottom: 0px;
 }
 
+.credit-details .procents {
+    font-size: 24px;
+}
 
-.amount-income {
+
+.amount-income,
+.expiry-date-legit {
     color: lightgreen;
 }
 
-.amount-outcome {
+.amount-outcome,
+.expiry-date-notlegit {
     color: lightcoral;
 }
 
@@ -177,6 +209,7 @@ body {
 
 .to-main-button {
     width: 50%;
+    min-width: 420px;
 }
 
 .show-more:hover,
