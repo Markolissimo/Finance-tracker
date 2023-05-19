@@ -1,11 +1,35 @@
 <!DOCTYPE html>
-<html lang="en"  style="height: 100%;">
+<html lang="en">
 <head>
     <link rel="stylesheet" href="profile.css">
     <title>Finance Tracker</title>
 </head>
 <body>
-    <div class="functionality-credit">
+        <div class="functionality-credit">
+            <h1 class="credit-title">У вас наявно 2 кредити: </h1>
+        <div class="center-vertically">
+            <div class="credit-details">
+                <div class="credit-expiry">
+                    <p class="expiry-date-legit">24.06.2023</p>
+                </div>
+                <div class="credit-description">
+                    <p class="procents">1%</p>
+                    <p class="description-text">Опис кредиту</p>
+                </div>
+            </div>
+        </div>
+        <div class="center-vertically">
+            <div class="credit-details">
+                <div class="credit-expiry">
+                    <p class="expiry-date-notlegit">13.04.2023</p>
+                </div>
+                <div class="credit-description">
+                    <p class="procents">0.4%</p>
+                    <p class="description-text">Опис кредиту</p>
+                </div>
+            </div>
+        </div>
+            
         <h2 class="functionality-title-credit">Оберіть кредит</h2>
         <div class="card-container">
             <div class="card">
@@ -14,7 +38,7 @@
                 <button>Оформити</button>
             </div>
             <div class="card">
-                <h3>HedgehogMoney</h3>
+                <h3>HedgMoney</h3>
                 <p>Опис карточки 2</p>
                 <button>Оформити</button>
             </div>
@@ -30,8 +54,10 @@
                 <p>Опис карточки 2</p>
                 <button>Оформити</button>
             </div>
+            
         </div>
         <button class="to-main-button" onclick="window.location.href='profile.html';">Повернутися на головну</button>
+        
     </div>
 </body>
 </html>

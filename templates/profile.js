@@ -4,10 +4,10 @@ google.charts.setOnLoadCallback(drawChart);
 function drawChart() {
     var data = google.visualization.arrayToDataTable([
         [' ', ' '],
-        ['Feb', 1000],
-        ['Mar', 1170],
-        ['Apr', 660],
-        ['May', 400]
+        ['Лютий', 1000],
+        ['Березень', 1170],
+        ['Квітень', 660],
+        ['Травень', 400]
     ]);
 
     var options = {
@@ -18,18 +18,15 @@ function drawChart() {
         colors: ['white'] // Колір графіку
     };
 
-    var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
-    chart.draw(data, options);
-
     var data2 = google.visualization.arrayToDataTable([
         [' ', ' '],
-        ['Mon', 1000],
-        ['Tue', 1170],
-        ['Wed', 660],
-        ['Thur', 400],
-        ['Fri', 300],
-        ['Sat', 500],
-        ['Sun', 788]
+        ['Пн', 1000],
+        ['Вт', 1170],
+        ['Ср', 660],
+        ['Чт', 400],
+        ['Пт', 300],
+        ['Сб', 500],
+        ['Нд', 788]
     ]);
 
     var options2 = {
@@ -42,10 +39,10 @@ function drawChart() {
 
     var data3 = google.visualization.arrayToDataTable([
         [' ', ' '],
-        ['Winter', 1000],
-        ['Spring', 500],
-        ['Summer', 300],
-        ['Autumn', 1200]
+        ['Зима', 1000],
+        ['Весна', 500],
+        ['Літо', 300],
+        ['Осінь', 1200]
     ]);
 
     var options3 = {
@@ -56,8 +53,12 @@ function drawChart() {
         colors: ['white'] // Колір графіку
     };
 
+    var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+    chart.draw(data2, options2);
+    
+
     window.addEventListener('resize', function () {
-        chart.draw(data, options);
+        chart.draw(data2, options2);
     });
 
 
