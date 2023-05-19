@@ -10,6 +10,13 @@ function drawChart() {
         ['Травень', 400]
     ]);
 
+    var options = {
+        vAxis: { textStyle: { color: 'white' }, minValue: 0 },
+        backgroundColor: 'transparent',
+        hAxis: { textStyle: { color: 'white' } },
+        annotations: { textStyle: { color: 'white' } },
+        colors: ['white'] // Колір графіку
+    };
 
     var data2 = google.visualization.arrayToDataTable([
         [' ', ' '],
@@ -22,6 +29,14 @@ function drawChart() {
         ['Нд', 788]
     ]);
 
+    var options2 = {
+        vAxis: { textStyle: { color: 'white' }, minValue: 0 },
+        backgroundColor: 'transparent',
+        hAxis: { textStyle: { color: 'white' } },
+        annotations: { textStyle: { color: 'white' } },
+        colors: ['white'] // Колір графіку
+    };
+
     var data3 = google.visualization.arrayToDataTable([
         [' ', ' '],
         ['Зима', 1000],
@@ -30,14 +45,13 @@ function drawChart() {
         ['Осінь', 1200]
     ]);
 
-    var options, options2, options3 = {
+    var options3 = {
         vAxis: { textStyle: { color: 'white' }, minValue: 0 },
         backgroundColor: 'transparent',
         hAxis: { textStyle: { color: 'white' } },
         annotations: { textStyle: { color: 'white' } },
         colors: ['white'] // Колір графіку
     };
-    
 
     var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
     chart.draw(data2, options2);
