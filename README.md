@@ -8,5 +8,6 @@ Frontend:
 - HTML;
 - CSS;
 - JS;
+
 Backend:
 - Python(Django)
