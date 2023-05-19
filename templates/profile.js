@@ -56,6 +56,9 @@ function drawChart() {
         colors: ['white'] // Колір графіку
     };
 
+    window.addEventListener('resize', function () {
+        chart.draw(data, options);
+    });
 
 
     function switchToQuater() {
@@ -77,6 +80,43 @@ function drawChart() {
     document.getElementById('line_chart_quarter').addEventListener('click', switchToQuater);
     document.getElementById('line_chart_week').addEventListener('click', switchToWeek);
 }
+
+function showIncomeFields(button) {
+    var incomeFields = button.nextElementSibling;
+    incomeFields.classList.remove("hidden");
+    button.style.display = "none";
+}
+
+function toggleFormFields(formType) {
+    var formButton = document.getElementById(formType + "FormButton");
+    var formFields = document.getElementById(formType + "FormFields");
+
+    formButton.classList.toggle("hidden");
+    formFields.classList.toggle("hidden");
+    
+}
+
+function addIncome(formType) {
+    var income = document.getElementById(formType + "IncomeInput").value;
+    var description = document.getElementById(formType + "DescriptionInput").value;
+    var errorMessage = document.getElementById(formType + "ErrorMessage");
+
+    if (income === '' || description === '') {
+        errorMessage.textContent = "Поля мають бути заповненими";
+        return;
+    }
+
+    // Додати логіку для додавання доходу
+
+    // Повернення до початкового стану
+    
+}
+toggleFormFields(formType);
+
+
+
+
+
 
 
 
